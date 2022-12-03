@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+    .header {
+      padding: 7px;
+      text-align: right;
+      background: red;
+      color: black;
+      font-size: 30px;
+    }
+
+    .list-element-styling{
+      list-style-type: none;
+
+      /*list-style-type: none;*/
+    }
+    .parent-menu{
+      background-color: gray;
+      padding: 0.50em;
+      margin:0;
+    }
+
+    .parent-menu > li {
+      display: inline-block;
+    }
+
+    .parent-menu > li > a{
+      text-decoration: none;
+      padding: 0.75em;
+      color: white;
+    }
+
+    .parent-menu > li > a:hover {
+      background-color: black;
+    }
+
+    .item-containing-child-menu{
+      position: relative;
+    }
+    .child-menu {   
+      display: none;   
+      position: absolute;
+      margin:0;
+      padding-left: 0;
+      top: 30px;
+      left: 20px;
+      white-space: nowrap;
+      background-color: lightgray;
+    }
+    .child-menu > li {
+    padding-bottom: 0.5em;
+    }
+
+    .child-menu > li > a{
+      text-decoration: none;
+      padding: 0.75em;
+      
+      color: blue; 
+    }
+    /*.child-default-display{
+     
+    }*/
+
+    .item-containing-child-menu:hover .child-menu{
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="header">
+  <h3>Demo of Dropdown</h3>
+</div>
+  
+  <nav>
+    <ul class="parent-menu list-element-styling">
+      <li>    
+          <a href="">Link 1</a>    
+      </li>
+
+      <li class="item-containing-child-menu">        
+        <a href="">Link 2</a> 
+        
+        <ul class="child-menu list-element-styling">
+            <li>
+              <a href="">DD_Link_1</a>
+            </li>
+            <li>
+              <a href="">DD_Link_2</a>
+            </li>
+            <li>
+              <a href="">DD_Link_3</a>
+            </li>
+        </ul>
+
+      </li>
+
+      <li class="item-containing-child-menu">        
+        <a href="">Link 3</a>    
+      
+        <ul class="child-menu list-element-styling">
+            <li>
+              <a href="">DD_Link_1</a>
+            </li>
+            <li>
+              <a href="">DD_Link_2</a>
+            </li>
+            <li>
+              <a href="">DD_Link_3</a>
+            </li>
+        </ul>
+
+      </li>
+
+    </ul>
+  </nav>
+
+</body>
+</html>
